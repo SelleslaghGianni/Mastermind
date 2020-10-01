@@ -30,7 +30,7 @@ for attempts in range(10):
     wrongPlace = 0
     # DEBUG: print(answer)
 
-    #This 
+    # This part of the code asks you to enter your answer and then turns the number into a word. It also tells the player what color he entered, sort of as a debugger.
     for i in range(4):
         attempt.append(input("Please enter your answer. Remember to use numbers!\n"))
 
@@ -55,6 +55,8 @@ for attempts in range(10):
 
         print("You chose the answer: " + attempt[i] +".")
 
+    # This part checks if the answers are ok. It's a nested loop because I want to check for both exact correct numbers and correct numbers in the wrong slot.
+    # After that it either ends the game or it tells the player to try again and some information.
     for j in range(4):
         if (attempt[j] == answer[j]):
             rightPlace = rightPlace + 1
